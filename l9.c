@@ -81,6 +81,7 @@ void p3()
                     strcpy(vector_de_nume[k], vector_de_nume[k + 1]);
                 }
                 n--;
+                j--;
             }
         }
         printf("%s %d\n", vector_de_nume[i], aparitii);
@@ -166,6 +167,7 @@ void p6()
                     strcpy(vector_de_produse[k], vector_de_produse[k + 1]);
                 }
                 n--;
+                j--;
             }
         }
         printf("%s %.1f, %.1f\n", vector_de_produse[i], cantitate[i], pret[i]);
@@ -277,21 +279,21 @@ void p10()
     char vector_de_produse[100][15];
     float pret[100], pret_maxim;
     int i = 0, n;
-    while(scanf("%s %f", vector_de_produse[i], &pret[i]) == 2)
+    while (scanf("%s %f", vector_de_produse[i], &pret[i]) == 2)
     {
         i++;
     }
     n = i;
-    for(i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
-        if(pret[i] > pret_maxim)
+        if (pret[i] > pret_maxim)
         {
             pret_maxim = pret[i];
         }
     }
-    for(i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
-        if(pret[i] == pret_maxim)
+        if (pret[i] == pret_maxim)
         {
             printf("%s\n", vector_de_produse[i]);
         }
@@ -311,6 +313,6 @@ int main(void)
     // char s3[] = "sir de caractere";
     // printf("%d\n", upper_sub_string(s1, s2));
     // printf("%d\n", string_replace(s1, s2, s3));
-    p10();
+    // p10();
     return 0;
 }
