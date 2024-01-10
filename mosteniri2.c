@@ -244,6 +244,9 @@ void p4()
     printfArray(a, n);
     printfArray(b, m);
     printfArray(c, k);
+    free(a);
+    free(b);
+    free(c);
 }
 
 int main(void)
