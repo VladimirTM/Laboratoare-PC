@@ -34,7 +34,7 @@ int **matrix(FILE *f, int m, int n)
         if (index == current_size)
         {
             current_size += CHUNK;
-            if ((matrix = realloc(matrix, current_size * sizeof(int))) == NULL)
+            if ((matrix = realloc(matrix, current_size * sizeof(int*))) == NULL)
             {
                 perror(NULL);
                 exit(-1);
